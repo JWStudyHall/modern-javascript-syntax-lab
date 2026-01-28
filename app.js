@@ -2,15 +2,16 @@
 const nums = [13, 87, 2, 89, 12, 4, 90, 63];
 
 const numsTimesTwo = nums.map((num) => {
-  return 2 + numsTimesTwo;
+  return num * 2;
 });
 console.log(numsTimesTwo);
 
+//all itteration need a callback funstion except forEach
 // ! Exercise 2:
 
 const pizzaToppings = ["Pineapple", "Olives", "Anchovies"];
 
-const [firstIngredient, secondTopping] = toppingsArray;
+const [firstIngredient, secondIngredient] = pizzaToppings;
 
 console.log(firstIngredient);
 console.log(secondIngredient);
@@ -22,18 +23,12 @@ const car = {
   model: "Q5",
 };
 
-const [make, model] = car;
+const {make, model} = car;
 
 console.log(make);
 console.log(model);
 
 // ! Exercise 4:
-// a. Duplicate the provided `morePizzaToppings` array using the spread
-//    operator and assign it to a variable named `uncontroversialPizzaToppings`.
-//
-// b. Console log the `uncontroversialPizzaToppings` variable.
-//
-// Starting code (don't modify this):
 
 const morePizzaToppings = ["Cheese", "Sauce"];
 
@@ -42,24 +37,16 @@ const uncontroversialPizzaToppings = [...morePizzaToppings];
 console.log(uncontroversialPizzaToppings);
 
 // ! Exercise 5:
-// a. Duplicate the provided `anotherCar` object and spread its values into a
-//    new variable named `myCar`.
-//
-// b. Change the `make` and `model` properties of the `myCar` object to new
-//    values.
-//
-// c. Console log both objects and observe the results.
-//
-// Starting code (don't modify this):
-
 const anotherCar = {
   make: "Toyota",
   model: "RAV4",
 };
 
-const myCar = { ...anotherCar };
+const myCar = { ...anotherCar 
+
 myCar.make = "Mazda";
-myCar.model = "3";
+  model = "3";
+};
 
 console.log("another", anotherCar);
 console.log("my", myCar);
@@ -83,7 +70,7 @@ const propertyName = {
   email: String,
 };
 
-const userProfile = [propertyName];
+const userProfile = (propertyName{username});
 
 // ! Exercise 8:
 // a. Create a function with two parameters, `noun` and `adjective`.
@@ -153,8 +140,6 @@ const localLangConfig = null; // Change to 'es', 'fr', etc., or leave it `null`.
 // Simulated user theme preference (change this variable to test)
 const savedUserTheme = null; // Change to 'dark', etc., or leave it `null`.
 
-
-
 // ! Exercise 11:
 // a. Use optional chaining in a console.log so that a console log of
 //    `adventurer.cat.age` returns `undefined` instead of an error.
@@ -167,4 +152,3 @@ const adventurer = {
 let cat = adventurer.cat?.age;
 
 console.log(cat);
-
