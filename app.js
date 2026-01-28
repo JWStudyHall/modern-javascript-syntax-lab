@@ -1,3 +1,5 @@
+// const { use } = require("react");
+
 // ! Exercise 1:
 const nums = [13, 87, 2, 89, 12, 4, 90, 63];
 
@@ -23,7 +25,7 @@ const car = {
   model: "Q5",
 };
 
-const {make, model} = car;
+const { make, model } = car;
 
 console.log(make);
 console.log(model);
@@ -42,35 +44,22 @@ const anotherCar = {
   model: "RAV4",
 };
 
-const myCar = { ...anotherCar 
+const myCar = { ...anotherCar };
 
 myCar.make = "Mazda";
-  model = "3";
-};
+myCar.model = "3";
 
 console.log("another", anotherCar);
 console.log("my", myCar);
 
 // ! Exercise 6:
-// a. Define a variable named `propertyName` and assign a string (like
-//    'username', 'age', or 'email') to it.
-//
-// b. Create an object named `userProfile`.
-//
-// c. Use `propertyName` as a dynamic key in `userProfile`. Assign it a
-//    relevant value.
-//
-// d. Console log the `userProfile` object to see the result.
-//
-// Your code here:
 
-const propertyName = {
-  username: String,
-  age: String,
-  email: String,
+const propertyName = "username";
+
+const userProfile = {
+  [propertyName]: "Mike",
 };
-
-const userProfile = (propertyName{username});
+console.log(userProfile);
 
 // ! Exercise 8:
 // a. Create a function with two parameters, `noun` and `adjective`.
@@ -85,7 +74,7 @@ const userProfile = (propertyName{username});
 function aSentence(noun = "cat", adjective = "orange") {
   return `The ${noun} is ${adjective}`;
 }
-aSentence();
+console.log(aSentence("banana", "yellow"));
 // ! Exercise 9:
 // a. Convert the following `if...else` statement into a ternary:
 //
@@ -98,7 +87,7 @@ aSentence();
 // Starting code (don't modify this):
 
 const pizza = "tasty";
-let review = pizza === tasty ? "Yes" : "No";
+let review = pizza === "tasty" ? "Yes" : "No";
 
 console.log(review);
 
@@ -120,31 +109,21 @@ console.log(review);
 // Your code here (localLangConfig is provided to get you started):
 
 // Simulated language configuration (change this variable to test)
-const localLangConfig = null; // Change to 'es', 'fr', etc., or leave it `null`.
+
+const localLangConfig = "es"; // Change to 'es', 'fr', etc., or leave it `null`.
+const lang = localLangConfig || "en";
+
+console.log(lang);
 
 // ! 10.2: Set website theme
-// Intro: In this exercise, you'll construct a single line of code that assigns
-//        a default value to a variable named `theme` using the logical OR
-//        operator. This line should match the logic of the following statement:
-//
-//        "theme is equal to savedUserTheme or the default value of light."
-//
-// a. Create a variable called `theme`.
-//
-// b. Assign `theme` the value of `savedUserTheme` or 'light' as a default.
-//
-// c. Log the value of `theme` to the console.
-//
-// Your code here (`savedUserTheme` is provided to get you started):
 
-// Simulated user theme preference (change this variable to test)
-const savedUserTheme = null; // Change to 'dark', etc., or leave it `null`.
 
+const savedUserTheme = "dark"; // Change to 'dark', etc., or leave it `null`.
+const theme = savedUserTheme || "light";
+
+console.log(theme);
 // ! Exercise 11:
-// a. Use optional chaining in a console.log so that a console log of
-//    `adventurer.cat.age` returns `undefined` instead of an error.
-//
-// Starting code (don't modify this):
+
 
 const adventurer = {
   name: "Alice",
